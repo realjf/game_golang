@@ -12,6 +12,25 @@ type color struct {
 	r, g, b byte
 }
 
+type pos struct {
+	x, y float32
+}
+
+type ball struct {
+	pos    pos
+	radius int
+	xv     float32
+	yv     float32
+	color  color
+}
+
+type paddle struct {
+	pos   pos
+	w     int
+	h     int
+	color color
+}
+
 func setPixel(x, y int, c color, pixels []byte) {
 	index := (y*winWidth + x) * 4
 
@@ -65,5 +84,4 @@ func main() {
 	renderer.Present()
 
 	sdl.Delay(2000)
-
 }

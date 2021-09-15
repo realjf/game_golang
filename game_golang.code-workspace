@@ -4,6 +4,9 @@
             "path": "sdl2"
         },
         {
+            "path": "pong"
+        },
+        {
             "path": "."
         }
     ]
